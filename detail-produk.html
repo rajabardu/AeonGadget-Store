@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - AeonGadget Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/electronics.png">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="logo-text">
+                    <h1><span class="logo-aeon">Aeon</span>Gadget</h1>
+                    <p class="logo-tagline">Store</p>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="produk.html"><i class="fas fa-box"></i> Produk</a></li>
+                <li class="search-container">
+                    <input type="text" id="search-bar" placeholder="Cari produk gadget...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </li>
+                <li>
+                    <a href="#" id="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Halaman Pembayaran -->
+    <section class="checkout-page">
+        <div class="container">
+            <div class="checkout-header">
+                <h1 class="page-title"><i class="fas fa-credit-card"></i> Checkout Pembayaran</h1>
+                <div class="checkout-steps">
+                    <div class="step active">
+                        <span class="step-number">1</span>
+                        <span class="step-text">Informasi Pengiriman</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <span class="step-text">Metode Pembayaran</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <span class="step-text">Konfirmasi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout-container">
+                <div class="checkout-form">
+                    <h2><i class="fas fa-shipping-fast"></i> Informasi Pengiriman</h2>
+                    <form id="payment-form">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" placeholder="Masukkan nama lengkap" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="contoh@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Nomor Telepon</label>
+                                <input type="tel" id="phone" placeholder="08xxxxxxxxxx" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Alamat Lengkap</label>
+                            <textarea id="address" rows="3" placeholder="Masukkan alamat lengkap pengiriman" required></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="province">Provinsi</label>
+                                <select id="province" required>
+                                    <option value="">Pilih Provinsi</option>
+                                    <option value="jakarta">DKI Jakarta</option>
+                                    <option value="jabar">Jawa Barat</option>
+                                    <option value="jateng">Jawa Tengah</option>
+                                    <option value="jatim">Jawa Timur</option>
+                                    <option value="bali">Bali</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Kota</label>
+                                <input type="text" id="city" placeholder="Kota" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="district">Kecamatan</label>
+                                <input type="text" id="district" placeholder="Kecamatan" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="postal-code">Kode Pos</label>
+                                <input type="text" id="postal-code" placeholder="Kode Pos" required>
+                            </div>
+                        </div>
+                        
+                        <h2><i class="fas fa-credit-card"></i> Metode Pembayaran</h2>
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <input type="radio" id="bank-transfer" name="payment" value="bank-transfer" checked>
+                                <label for="bank-transfer">
+                                    <i class="fas fa-university"></i>
+                                    <span>Transfer Bank</span>
+                                </label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="credit-card" name="payment" value="credit-card">
+                                <label for="credit-card">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Kartu Kredit/Debit</span>
+                                </label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="e-wallet" name="payment" value="e-wallet">
+                                <label for="e-wallet">
+                                    <i class="fas fa-wallet"></i>
+                                    <span>E-Wallet</span>
+                                </label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="cod" name="payment" value="cod">
+                                <label for="cod">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Bayar di Tempat (COD)</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-details" id="bank-details">
+                            <h3><i class="fas fa-info-circle"></i> Instruksi Transfer Bank</h3>
+                            <p>Silakan transfer ke rekening berikut:</p>
+                            <div class="bank-info">
+                                <p><strong>Bank BCA</strong></p>
+                                <p>No. Rekening: 8880 1234 5678</p>
+                                <p>Atas Nama: PT AeonGadget Indonesia</p>
+                                <p>Jumlah: <span id="transfer-amount">Rp 0</span></p>
+                                <p class="bank-note">Transfer harus sesuai dengan jumlah di atas untuk mempercepat proses verifikasi</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group terms">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">Saya menyetujui <a href="#">Syarat dan Ketentuan</a> serta <a href="#">Kebijakan Privasi</a> yang berlaku</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-payment-btn">
+                            <i class="fas fa-lock"></i> Bayar Sekarang
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="order-summary">
+                    <h2><i class="fas fa-receipt"></i> Ringkasan Pesanan</h2>
+                    <div class="order-items">
+                        <!-- Item pesanan akan ditambahkan melalui JavaScript -->
+                    </div>
+                    <div class="order-totals">
+                        <div class="order-row">
+                            <span>Subtotal</span>
+                            <span id="order-subtotal">Rp 0</span>
+                        </div>
+                        <div class="order-row">
+                            <span>Biaya Pengiriman</span>
+                            <span id="shipping-cost">Rp 25.000</span>
+                        </div>
+                        <div class="order-row">
+                            <span>Diskon Promo</span>
+                            <span id="discount">-Rp 0</span>
+                        </div>
+                        <div class="order-row">
+                            <span>PPN (10%)</span>
+                            <span id="tax">Rp 0</span>
+                        </div>
+                        <div class="order-row total">
+                            <span>Total Pembayaran</span>
+                            <span id="order-total">Rp 0</span>
+                        </div>
+                    </div>
+                    <div class="promo-code">
+                        <h3><i class="fas fa-tag"></i> Kode Promo</h3>
+                        <div class="promo-input">
+                            <input type="text" id="promo-code" placeholder="Masukkan kode promo">
+                            <button id="apply-promo">Terapkan</button>
+                        </div>
+                    </div>
+                    <div class="order-help">
+                        <p><i class="fas fa-question-circle"></i> Butuh bantuan? Hubungi kami di (021) 888-1234</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Pembayaran Berhasil -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2><i class="fas fa-check-circle"></i> Pembayaran Berhasil!</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Terima kasih untuk pembelian Anda!</h3>
+                <p>Pesanan Anda telah berhasil diproses. Kami akan mengirimkan konfirmasi dan detail pengiriman ke email Anda dalam waktu 1x24 jam.</p>
+                <div class="order-details">
+                    <p><strong>No. Pesanan:</strong> AG-2026-001234</p>
+                    <p><strong>Tanggal:</strong> 9 Januari 2026</p>
+                    <p><strong>Total Pembayaran:</strong> <span id="modal-total">Rp 0</span></p>
+                    <p><strong>Estimasi Pengiriman:</strong> 3-5 hari kerja</p>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn-primary" id="back-to-home">Kembali ke Beranda</button>
+                    <button class="btn-secondary" id="track-order">Lacak Pesanan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo-container">
+                        <div class="footer-logo-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="footer-logo-text">
+                            <h3 class="footer-logo"><span class="logo-aeon">Aeon</span>Gadget</h3>
+                            <p class="footer-logo-tagline">Store</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Destinasi belanja online terpercaya dengan produk berkualitas dan pelayanan terbaik</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-shipping-fast"></i> Pengiriman Cepat</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Garansi Resmi</a></li>
+                        <li><a href="#"><i class="fas fa-headset"></i> Bantuan 24/7</a></li>
+                        <li><a href="#"><i class="fas fa-undo"></i> Pengembalian Mudah</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak Kami</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Jl. Gadget No. 123, Jakarta</li>
+                        <li><i class="fas fa-phone"></i> (021) 888-1234</li>
+                        <li><i class="fas fa-envelope"></i> info@aeongadget.com</li>
+                        <li><i class="fas fa-clock"></i> Senin - Minggu: 08:00 - 22:00</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-icon tiktok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                    <p class="newsletter-text">Berlangganan newsletter untuk promo terbaru</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Email Anda">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AeonGadget Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

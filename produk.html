@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - AeonGadget Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/electronics.png">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="logo-text">
+                    <h1><span class="logo-aeon">Aeon</span>Gadget</h1>
+                    <p class="logo-tagline">Store</p>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="produk.html" class="active"><i class="fas fa-box"></i> Produk</a></li>
+                <li class="search-container">
+                    <input type="text" id="search-bar" placeholder="Cari produk gadget...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </li>
+                <li>
+                    <a href="#" id="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Keranjang Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Keranjang Belanja</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Item keranjang akan ditambahkan melalui JavaScript -->
+        </div>
+        <div class="cart-summary">
+            <div class="subtotal">
+                <span>Sub Total:</span>
+                        <span class="subtotal-price">Rp 0</span>
+            </div>
+            <div class="total">
+                <span>Total:</span>
+                <span class="total-price">Rp 0</span>
+            </div>
+            <button class="checkout-btn" id="checkout-btn">Lanjut ke Pembayaran</button>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+
+    <!-- Header Halaman Produk -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Produk Gadget</h1>
+            <p>Temukan berbagai pilihan gadget berkualitas untuk kebutuhan sehari-hari Anda</p>
+        </div>
+    </section>
+
+    <!-- Filter dan Produk -->
+    <section class="products-page">
+        <div class="container">
+            <div class="products-filter">
+                <div class="filter-options">
+                    <select id="category-filter">
+                        <option value="all">Semua Kategori</option>
+                        <option value="smartphone">Smartphone</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="tablet">Tablet</option>
+                        <option value="aksesoris">Aksesoris</option>
+                    </select>
+                    <select id="price-filter">
+                        <option value="all">Semua Harga</option>
+                        <option value="low">Rp 0 - 3.000.000</option>
+                        <option value="medium">Rp 3.000.000 - 10.000.000</option>
+                        <option value="high">Rp 10.000.000+</option>
+                    </select>
+                    <select id="brand-filter">
+                        <option value="all">Semua Merek</option>
+                        <option value="apple">Apple</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="xiaomi">Xiaomi</option>
+                        <option value="asus">Asus</option>
+                        <option value="lenovo">Lenovo</option>
+                    </select>
+                    <button id="reset-filter">Reset Filter</button>
+                </div>
+                <div class="products-count">
+                    Menampilkan <span id="products-shown">12</span> dari <span id="products-total">12</span> produk
+                </div>
+            </div>
+            <div class="products-grid" id="products-container">
+                <!-- Produk akan ditambahkan melalui JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo-container">
+                        <div class="footer-logo-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="footer-logo-text">
+                            <h3 class="footer-logo"><span class="logo-aeon">Aeon</span>Gadget</h3>
+                            <p class="footer-logo-tagline">Store</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Destinasi belanja online terpercaya dengan produk berkualitas dan pelayanan terbaik</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-shipping-fast"></i> Pengiriman Cepat</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Garansi Resmi</a></li>
+                        <li><a href="#"><i class="fas fa-headset"></i> Bantuan 24/7</a></li>
+                        <li><a href="#"><i class="fas fa-undo"></i> Pengembalian Mudah</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak Kami</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Jl. Gadget No. 123, Jakarta</li>
+                        <li><i class="fas fa-phone"></i> (021) 888-1234</li>
+                        <li><i class="fas fa-envelope"></i> info@aeongadget.com</li>
+                        <li><i class="fas fa-clock"></i> Senin - Minggu: 08:00 - 22:00</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-icon tiktok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                    <p class="newsletter-text">Berlangganan newsletter untuk promo terbaru</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Email Anda">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AeonGadget Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
