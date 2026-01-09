@@ -2,124 +2,31 @@
 const products = [
     {
         id: 1,
-        name: "iPhone 15 Pro Max 256GB",
+        name: "Aeon C17",
         category: "smartphone",
-        brand: "apple",
-        price: 22999000,
-        originalPrice: 25999000,
+        price: 19000000,
+        originalPrice: 25000000,
         image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
         description: "iPhone 15 Pro Max dengan chip A17 Pro, kamera 48MP, dan desain titanium."
     },
     {
         id: 2,
-        name: "Samsung Galaxy S24 Ultra 512GB",
+        name: "Aeon Pe25",
         category: "smartphone",
-        brand: "samsung",
-        price: 19999000,
-        originalPrice: 22999000,
+        price: 18500000,
+        originalPrice: 23999000,
         image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
         description: "Samsung flagship dengan S Pen, kamera 200MP, dan layar Dynamic AMOLED 2X."
     },
     {
         id: 3,
-        name: "MacBook Pro M3 14-inch",
-        category: "laptop",
-        brand: "apple",
-        price: 27999000,
-        originalPrice: 30999000,
-        image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+        name: "AeonE13",
+        category: "smartphone",
+        price: 14500000,
+        originalPrice: 18000000,
+        image: "https://cdn.topsellbelanja.com/wp-content/uploads/2024/12/iQoo-13-g1-c.webp?_gl=1*17gibaz*_gcl_au*ODI5NjI3OTQ2LjE3Njc5NjczMzc.",
         description: "MacBook Pro dengan chip M3, layar Liquid Retina XDR, dan baterai tahan lama."
     },
-    {
-        id: 4,
-        name: "ROG Zephyrus G16 Gaming Laptop",
-        category: "laptop",
-        brand: "asus",
-        price: 32999000,
-        originalPrice: 36999000,
-        image: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1168&q=80",
-        description: "Laptop gaming dengan RTX 4070, processor Intel Core i9, dan layar 240Hz."
-    },
-    {
-        id: 5,
-        name: "iPad Pro 12.9-inch M2",
-        category: "tablet",
-        brand: "apple",
-        price: 18999000,
-        originalPrice: 21999000,
-        image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-        description: "iPad Pro dengan chip M2, layar Liquid Retina XDR, dan kompatibel dengan Apple Pencil."
-    },
-    {
-        id: 6,
-        name: "Xiaomi 14 Pro 512GB",
-        category: "smartphone",
-        brand: "xiaomi",
-        price: 15999000,
-        originalPrice: 17999000,
-        image: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1128&q=80",
-        description: "Xiaomi flagship dengan kamera Leica, chip Snapdragon 8 Gen 3, dan pengisian cepat 120W."
-    },
-    {
-        id: 7,
-        name: "Samsung Galaxy Tab S9 Ultra",
-        category: "tablet",
-        brand: "samsung",
-        price: 17999000,
-        originalPrice: 19999000,
-        image: "https://images.unsplash.com/photo-1546054451-aa28416b6d73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-        description: "Tablet premium dengan S Pen, layar Dynamic AMOLED 2X 14.6\", dan chip Snapdragon 8 Gen 2."
-    },
-    {
-        id: 8,
-        name: "AirPods Pro 2nd Generation",
-        category: "aksesoris",
-        brand: "apple",
-        price: 3999000,
-        originalPrice: 4999000,
-        image: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-        description: "AirPods Pro dengan noise cancellation adaptif, audio berkualitas tinggi, dan charging case."
-    },
-    {
-        id: 9,
-        name: "Logitech MX Master 3S Mouse",
-        category: "aksesoris",
-        brand: "logitech",
-        price: 1499000,
-        originalPrice: 1899000,
-        image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80",
-        description: "Mouse ergonomis dengan sensor 8K DPI, scroll wheel MagSpeed, dan koneksi multi-device."
-    },
-    {
-        id: 10,
-        name: "Lenovo Legion Pro 7i",
-        category: "laptop",
-        brand: "lenovo",
-        price: 34999000,
-        originalPrice: 38999000,
-        image: "https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1151&q=80",
-        description: "Laptop gaming dengan RTX 4080, processor Intel Core i9-14900HX, dan layar 240Hz Mini-LED."
-    },
-    {
-        id: 11,
-        name: "Sony WH-1000XM5 Headphones",
-        category: "aksesoris",
-        brand: "sony",
-        price: 5999000,
-        originalPrice: 6999000,
-        image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-        description: "Headphone noise cancelling premium dengan kualitas audio terbaik dan baterai 30 jam."
-    },
-    {
-        id: 12,
-        name: "Apple Watch Series 9 45mm",
-        category: "aksesoris",
-        brand: "apple",
-        price: 8999000,
-        originalPrice: 9999000,
-        image: "https://images.unsplash.com/photo-1579586337278-3f8d66836542?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-        description: "Apple Watch dengan chip S9, layar Always-On Retina, dan fitur kesehatan canggih."
-    }
 ];
 
 // Cart state
