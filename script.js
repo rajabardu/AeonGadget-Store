@@ -688,7 +688,7 @@ function setupPaymentForm() {
     if (applyPromoBtn) {
         applyPromoBtn.addEventListener('click', function() {
             const promoCode = promoCodeInput.value.trim().toUpperCase();
-            if (promoCode === 'AEON20') {
+            if (promoCode === 'AEONLAUNCH10') {
                 // Apply 10% discount
                 const discountAmount = Math.round(subtotal * 0.1);
                 const newTotal = total - discountAmount;
