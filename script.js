@@ -4,8 +4,8 @@ const products = [
         id: 1,
         name: "Aeon C17",
         category: "smartphone",
-        price: 19000000,
-        originalPrice: 25000000,
+        price: 24999000,
+        originalPrice: 26999000,
         image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
         description: "iPhone 15 Pro Max dengan chip A17 Pro, kamera 48MP, dan desain titanium."
     },
@@ -13,8 +13,8 @@ const products = [
         id: 2,
         name: "Aeon Pe25",
         category: "smartphone",
-        price: 18500000,
-        originalPrice: 23999000,
+        price: 22999000,
+        originalPrice: 25999000,
         image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
         description: "Samsung flagship dengan S Pen, kamera 200MP, dan layar Dynamic AMOLED 2X."
     },
@@ -22,8 +22,8 @@ const products = [
         id: 3,
         name: "AeonE13",
         category: "smartphone",
-        price: 14500000,
-        originalPrice: 18000000,
+        price: 17999000,
+        originalPrice: 19999000,
         image: "https://cdn.topsellbelanja.com/wp-content/uploads/2024/12/iQoo-13-g1-c.webp?_gl=1*17gibaz*_gcl_au*ODI5NjI3OTQ2LjE3Njc5NjczMzc.",
         description: "MacBook Pro dengan chip M3, layar Liquid Retina XDR, dan baterai tahan lama."
     },
@@ -660,8 +660,8 @@ function setupPaymentForm() {
     // Calculate order totals
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const shipping = 25000;
-    const taxAmount = Math.round(subtotal * 0.1);
-    const total = subtotal + shipping + taxAmount;
+    const taxAmount = 0;
+    const total = subtotal + shipping;
     
     // Update order summary
     if (orderSubtotal) orderSubtotal.textContent = `Rp ${subtotal.toLocaleString('id-ID')}`;
@@ -689,15 +689,15 @@ function setupPaymentForm() {
         applyPromoBtn.addEventListener('click', function() {
             const promoCode = promoCodeInput.value.trim().toUpperCase();
             if (promoCode === 'AEON20') {
-                // Apply 20% discount
-                const discountAmount = Math.round(subtotal * 0.2);
+                // Apply 10% discount
+                const discountAmount = Math.round(subtotal * 0.1);
                 const newTotal = total - discountAmount;
                 
                 if (discount) discount.textContent = `-Rp ${discountAmount.toLocaleString('id-ID')}`;
                 if (orderTotal) orderTotal.textContent = `Rp ${newTotal.toLocaleString('id-ID')}`;
                 if (transferAmount) transferAmount.textContent = `Rp ${newTotal.toLocaleString('id-ID')}`;
                 
-                showNotification('Kode promo berhasil diterapkan! Diskon 20%', 'success');
+                showNotification('Kode promo berhasil diterapkan! Diskon 10%', 'success');
                 promoCodeInput.value = '';
             } else if (promoCode === '') {
                 showNotification('Masukkan kode promo terlebih dahulu', 'warning');
